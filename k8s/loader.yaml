@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loader
+spec:
+  selector:
+    matchLabels:
+      app: loader
+  template:
+    metadata: 
+      labels:
+        app: loader
+    spec:
+      containers:
+      - name: loader
+        image: busybox
